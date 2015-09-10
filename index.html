@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image srcset</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Verdana, Sans-Serif;
+        }
+
+        img {
+            max-width: 100%;
+            border: solid 1px #c0c0c0;
+            -webkit-box-shadow: 0 0 5px rgba(50, 50, 50, 0.48);
+            -moz-box-shadow: 0 0 5px rgba(50, 50, 50, 0.48);
+            box-shadow: 0 0 5px rgba(50, 50, 50, 0.48);
+        }
+
+        .main {
+            width: 95%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        table {
+        	border-collapse: collapse;
+        	border: 1px solid #000;
+        }
+        table td {
+        	border: 1px solid #000;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Srcset</h1>
+        <p>Image loaded assign the screen devicePixelRatio.</p>
+        Text before <img src="assets/srcset_@x.png" srcset="assets/srcset_@x.png 1x, assets/srcset_@2x.png 2x, assets/srcset_@3x.png 3x" alt="srcset example" /> Text after<br>
+        <table>
+        	<tr>
+        		<td>
+        			Text before
+        			<img src="assets/srcset_@x.png" srcset="assets/srcset_@x.png 1x, assets/srcset_@2x.png 2x, assets/srcset_@3x.png 3x" alt="srcset example" />
+        			Text after
+    			</td>
+        		<td>
+        			column 2
+        		</td>	
+        	</tr>
+        </table><br>
+        <table>
+        	<tr>
+        		<td>
+        			<img src="assets/srcset_@x.png" srcset="assets/srcset_@x.png 1x, assets/srcset_@2x.png 2x, assets/srcset_@3x.png 3x" alt="srcset example" />
+    			</td>
+        		<td>
+        			column 2
+        		</td>	
+        	</tr>
+        </table>
+        <hr>
+        <h2>Demo preset images</h2>
+        <ul>
+            <li>1x screen (4Kb h=160px):<br><img src="assets/srcset_@x.png"></li>
+            <li>2x screen (8Kb h=320px):<br><img src="assets/srcset_@2x.png"></li>
+            <li>3x screen (12Kb h=480px):<br><img src="assets/srcset_@3x.png"></li>
+        </ul>
+    </div>
+</body>
+</html>
